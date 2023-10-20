@@ -2,37 +2,64 @@
 
 import FvLogo from "@/commons/FvLogo";
 import NavLink from "@/commons/NavLink";
-import React, { useState } from "react";
+import SectionLayout from "@/commons/SectionLayout";
+import React, { useEffect, useState } from "react";
 
 export default function Navbar({ className = "" }) {
   const [navState, setNavState] = useState("Home");
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setScrolling(scrollTop > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className={` ${className}  p-3 flex justify-between w-full z-40`}>
-      <section>
-        <FvLogo />
-      </section>
-      <section className="flex items-center gap-4 text-white">
-        <NavLink
-          value="Home"
-          selected={navState === "Home"}
-          setSelected={setNavState}
-        />
-        <NavLink
-          value="Skills"
-          selected={navState === "Skills"}
-          setSelected={setNavState}
-        />
-        <NavLink
-          value="Projects"
-          selected={navState === "Projects"}
-          setSelected={setNavState}
-        />
-        <NavLink
-          value="Contact Us"
-          selected={navState === "Contact Us"}
-          setSelected={setNavState}
-        />
-      </section>
+    <nav
+      className={` ${className} w-full  m-auto py-4   z-40 transition-all duration-200 ${
+        scrolling
+          ? "bg-white text-purple rounded-none shadow-2xl"
+          : "bg-none text-white"
+      }`}
+    >
+      <div className="w-[90%] flex justify-between m-auto">
+        <section>
+          <FvLogo />
+        </section>
+        <section className="flex items-center gap-4 text-white">
+          <NavLink
+            value="Home"
+            selected={navState === "Home"}
+            setSelected={setNavState}
+            scrolling={scrolling}
+          />
+          <NavLink
+            value="Skills"
+            selected={navState === "Skills"}
+            setSelected={setNavState}
+            scrolling={scrolling}
+          />
+          <NavLink
+            value="Projects"
+            selected={navState === "Projects"}
+            setSelected={setNavState}
+            scrolling={scrolling}
+          />
+          <NavLink
+            value="ConactUs"
+            selected={navState === "ConactUs"}
+            setSelected={setNavState}
+            scrolling={scrolling}
+          />
+        </section>
+      </div>
     </nav>
   );
 }
