@@ -7,19 +7,19 @@ import SkillsPage from "@/components/SkillsPage";
 
 export default function Home() {
   return (
-    <main className="relative h-full  w-full  flex flex-col gap-4 items-center">
-      <Navbar className="fixed  rounded-md" />
+    <main className="relative h-full  w-full  flex flex-col  items-center">
+      <Navbar className="absolute  rounded-md" />
 
-      <PageLayout id="Home">
+      <PageLayout id="Home" className="bg-white">
         <HomePage />
       </PageLayout>
-      <PageLayout id="Skills">
+      <PageLayout id="Skills" className="bg-purple ">
         <SkillsPage />
       </PageLayout>
-      <PageLayout id="Projects">
+      <PageLayout id="Projects" className="bg-white">
         <ProjectsPage />
       </PageLayout>
-      <PageLayout id="ConactUs">
+      <PageLayout id="ConactUs" className="bg-purple ">
         <ContactUS />
       </PageLayout>
     </main>

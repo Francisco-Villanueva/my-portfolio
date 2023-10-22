@@ -18,7 +18,7 @@ export default function WorkCard({ project, className = "" }) {
     <article
       onMouseOver={handleHover}
       onMouseOut={handleHoverOut}
-      className={`relative h-[20rem] rounded-[5px] bg-white overflow-hidden ${className}`}
+      className={`relative h-[20rem] rounded-[5px] border    shadow-sm overflow-hidden hover:border-purple transition-all duration-200 ${className}`}
     >
       <Image
         src={project.logo}
@@ -35,9 +35,9 @@ export default function WorkCard({ project, className = "" }) {
 
       {showInfo ? (
         <span className="grid place-items-center  absolute p-4 h-full  w-full  bg-[rgba(255,255,255,.95)] cursor-pointer ">
-          <div className=" flex flex-col justify-between items-center h-[60%] font-bold text-purple font-montserrat ">
+          <div className=" flex flex-col justify-between items-center h-[80%]  font-bold text-purple font-montserrat ">
             <span className=" w-3/4 text-xl ">{project.description.short}</span>
-            <button className="border border-purple p-4 rounded-md transition-all duration-150  hover:bg-purple hover:text-white">
+            <button className="border border-purple px-4 py-2 rounded-md transition-all duration-150  hover:bg-purple hover:text-white">
               View Page
             </button>
           </div>

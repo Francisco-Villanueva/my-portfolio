@@ -14,12 +14,8 @@ export default function NavLink({
       href={`#${value}`}
       onClick={() => setSelected(value)}
       className={`${className} font-semibold ${
-        selected
-          ? scrolling
-            ? " bg-purple text-white"
-            : "text-white"
-          : "bg-none"
-      }  px-4 py-1 rounded-md text-dark-blue cursor-pointer transition-all duration-300`}
+        selected ? "text-purple" : "text-light-purple"
+      }  px-4 py-1 rounded-md  cursor-pointer transition-all duration-300`}
     >
       {value}
     </a>

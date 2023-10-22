@@ -3,16 +3,16 @@ import React from "react";
 
 export default function HomePage({ className = "" }) {
   return (
-    <section className={`${className}   h-full `}>
+    <section className={`${className}   h-[100vh]  `}>
       <div className="h-full w-full flex  items-center justify-around  p-[3rem] ">
         <div className="flex flex-col gap-4">
           <div className="flex gap-2  text-[3rem] ">
-            <span className="text-grey">Hi there, I'm</span>
-            <b className="text-white">Francisco</b>
+            <span className="text-light-purple">Hi there, I'm</span>
+            <b className="text-purple">Francisco</b>
           </div>
           <div className="flex gap-2   text-xl">
-            <span className="text-grey"> I'm a </span>
-            <b className="text-white">Full Stack Developer</b>
+            <span className="text-light-purple"> I'm a </span>
+            <b className="text-purple">Full Stack Developer</b>
           </div>
         </div>
         <div className=" relative  w-[50%] h-[60%]  ">
@@ -21,7 +21,7 @@ export default function HomePage({ className = "" }) {
             fill
             objectFit="contain"
             style={{
-              filter: "drop-shadow(30px 10px 2px #000);",
+              filter: "drop-shadow(10px 10px 2px #000);",
             }}
           />
         </div>
