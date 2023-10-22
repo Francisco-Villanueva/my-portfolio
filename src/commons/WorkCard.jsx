@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Button from "./Button";
+import { GithubIcon, LinkIcon } from "./Icons";
 
 export default function WorkCard({ project, className = "" }) {
   const [showInfo, setShowInfo] = useState(false);
@@ -38,7 +39,14 @@ export default function WorkCard({ project, className = "" }) {
         <span className="grid place-items-center  absolute p-4 h-full  w-full  bg-[rgba(255,255,255,.95)] cursor-pointer ">
           <div className=" flex flex-col justify-between items-center h-[80%]  font-bold text-purple font-montserrat ">
             <span className=" w-3/4 text-xl ">{project.description.short}</span>
-            <Button variant={"outline"}>View Page</Button>
+            <div className="flex gap-2">
+              <Button variant={"primary"}>
+                <GithubIcon className="h-[1rem] " />
+              </Button>
+              <Button variant={"primary"}>
+                <LinkIcon className="h-[1rem] " />
+              </Button>
+            </div>
           </div>
         </span>
       ) : null}

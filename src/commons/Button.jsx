@@ -3,7 +3,7 @@ import React from "react";
 export default function Button({ className = "", variant, children }) {
   const btnStyle = {
     variant: {
-      primary: " border border-purple  bg-purple text-white  ",
+      primary: " border border-purple  bg-purple text-white hover:scale-[1.1] ",
       secondary:
         " border  bg-white text-purple hover:bg-purple hover:text-white  ",
 
