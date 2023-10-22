@@ -13,10 +13,10 @@ import SkillColumn from "./SkillColumn";
 import SectionHeader from "@/commons/SectionHeader";
 import SectionLayout from "@/commons/SectionLayout";
 import InternalLayout from "@/commons/InternalLayout";
-export default function SkillsPage({ className = "" }) {
+export default function SkillsPage({ className = "", sectionTheme = "" }) {
   return (
     <InternalLayout>
-      <SectionHeader>SKILLS</SectionHeader>
+      <SectionHeader sectionTheme={sectionTheme}>SKILLS</SectionHeader>
 
       <SectionLayout className="flex gap-2  ">
         <SkillColumn

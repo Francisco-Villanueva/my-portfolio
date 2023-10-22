@@ -6,10 +6,10 @@ import SectionHeader from "@/commons/SectionHeader";
 import SectionLayout from "@/commons/SectionLayout";
 import React from "react";
 
-export default function ContactUS() {
+export default function ContactUS({ sectionTheme = "" }) {
   return (
     <InternalLayout>
-      <SectionHeader>Contact Me</SectionHeader>
+      <SectionHeader sectionTheme={sectionTheme}>Contact Me</SectionHeader>
       <SectionLayout className="  h-[80vh] rounded-md p-4 text-white font-montserrat w-1/2">
         <p className="text-2xl font-bold">
           I'm excited to learn about yoru proyect. Contact me to get started!

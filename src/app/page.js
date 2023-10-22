@@ -14,13 +14,13 @@ export default function Home() {
         <HomePage />
       </PageLayout>
       <PageLayout id="Skills" className="bg-purple ">
-        <SkillsPage />
+        <SkillsPage sectionTheme="purple" />
       </PageLayout>
       <PageLayout id="Projects" className="bg-white">
-        <ProjectsPage />
+        <ProjectsPage sectionTheme="white" />
       </PageLayout>
       <PageLayout id="Contact" className="bg-purple ">
-        <ContactUS />
+        <ContactUS sectionTheme="purple" />
       </PageLayout>
     </main>
   );

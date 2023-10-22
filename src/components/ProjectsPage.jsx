@@ -9,14 +9,13 @@ import SectionLayout from "@/commons/SectionLayout";
 import WorkCard from "@/commons/WorkCard";
 import useModal from "@/hooks/useModal";
 import { projects, myProjects } from "@/utils/projects";
-import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
-export default function ProjectsPage({ className = "" }) {
+export default function ProjectsPage({ className = "", sectionTheme = "" }) {
   const { isModalOpen, openModal, closeModal } = useModal();
   return (
     <InternalLayout>
-      <SectionHeader>PROJECTS</SectionHeader>
+      <SectionHeader sectionTheme={sectionTheme}>PROJECTS</SectionHeader>
 
       <SectionLayout className="grid grid-cols-3 gap-3 ">
         {projects.map((project) => (
