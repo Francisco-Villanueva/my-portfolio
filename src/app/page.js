@@ -19,7 +19,7 @@ export default function Home() {
       <PageLayout id="Projects" className="bg-white">
         <ProjectsPage />
       </PageLayout>
-      <PageLayout id="ConactUs" className="bg-purple ">
+      <PageLayout id="Contact" className="bg-purple ">
         <ContactUS />
       </PageLayout>
     </main>

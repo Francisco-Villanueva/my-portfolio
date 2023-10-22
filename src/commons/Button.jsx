@@ -1,0 +1,34 @@
+import React from "react";
+
+export default function Button({ className = "", variant, children }) {
+  const btnStyle = {
+    variant: {
+      primary: " border border-purple  bg-purple text-white  ",
+      secondary:
+        " border  bg-white text-purple hover:bg-purple hover:text-white  ",
+
+      outline: " border border-purple  hover:bg-purple hover:text-white  ",
+    },
+    size: {
+      big: "text-lg py-3 px-6",
+      small: "text-sm  py-2 px-6",
+    },
+    disabled: {
+      primary: "bg-light-grey    text-grey ",
+      delete: "bg-light-grey    text-grey ",
+
+      secondary: "bg-white   text-grey ",
+      text: "bg-white    text-grey   ",
+      alert: "bg-white   text-grey ",
+    },
+  };
+  return (
+    <button
+      className={`${
+        variant && btnStyle.variant[variant]
+      } px-4 py-2 rounded-md transition-all duration-150  ${className}`}
+    >
+      {children}
+    </button>
+  );
+}

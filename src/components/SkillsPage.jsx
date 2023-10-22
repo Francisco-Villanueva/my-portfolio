@@ -25,7 +25,7 @@ export default function SkillsPage({ className = "" }) {
             <CLIcon className="w-12 bg-purple rounded-full p-2 text-white" />
           }
           title={"Front End"}
-          description="I value simple content structure, clean design patterns, and thoughtful interactions."
+          // description="I value simple content structure, clean design patterns, and thoughtful interactions."
         />
         <SkillColumn
           skills={skills.back}
@@ -33,7 +33,7 @@ export default function SkillsPage({ className = "" }) {
             <BackEndIcon className="w-12 bg-purple rounded-full p-2 text-white" />
           }
           title={"Back End"}
-          description="I value simple content structure, clean design patterns, and thoughtful interactions."
+          // description="I value simple content structure, clean design patterns, and thoughtful interactions."
         />
         <SkillColumn
           skills={skills.db}
@@ -41,7 +41,7 @@ export default function SkillsPage({ className = "" }) {
             <StackIcon className="w-12 bg-purple rounded-full p-2 text-white" />
           }
           title={"Database"}
-          description="I value simple content structure, clean design patterns, and thoughtful interactions."
+          // description="I value simple content structure, clean design patterns, and thoughtful interactions."
         />
         <SkillColumn
           skills={skills.design}
@@ -49,7 +49,7 @@ export default function SkillsPage({ className = "" }) {
             <PenIcon className="w-12 bg-purple rounded-full p-2 text-white" />
           }
           title={"Design"}
-          description="I value simple content structure, clean design patterns, and thoughtful interactions."
+          // description="I value simple content structure, clean design patterns, and thoughtful interactions."
         />
         <SkillColumn
           skills={skills.org}
@@ -57,7 +57,7 @@ export default function SkillsPage({ className = "" }) {
             <OrganizationIcon className="w-12 bg-purple rounded-full p-2 text-white" />
           }
           title={"Organization"}
-          description="I value simple content structure, clean design patterns, and thoughtful interactions."
+          // description="I value simple content structure, clean design patterns, and thoughtful interactions."
         />
       </SectionLayout>
     </InternalLayout>

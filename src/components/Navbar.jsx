@@ -47,8 +47,8 @@ export default function Navbar({ className = "" }) {
             scrolling={scrolling}
           />
           <NavLink
-            value="ConactUs"
-            selected={navState === "ConactUs"}
+            value="Contact"
+            selected={navState === "Contact"}
             setSelected={setNavState}
             scrolling={scrolling}
           />

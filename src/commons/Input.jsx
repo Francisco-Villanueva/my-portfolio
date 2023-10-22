@@ -15,14 +15,20 @@ export default function Input({
   onFocus,
   error,
   touched,
+  outline,
+  size,
 }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const inputType = showPassword ? "text" : type;
 
   return (
-    <div className={`relative  h-[95px]   ${className}`}>
-      <label className="block text-dark-grey ml-2 font-sans">{title}</label>
+    <div
+      className={`relative  ${
+        size ? `h-[${size + 2}rem]` : "h-[6rem]"
+      }    ${className}`}
+    >
+      <label className="block text-dark-grey ml-2 text-gray-400">{title}</label>
       <input
         value={value}
         onChange={onChange}
@@ -31,9 +37,11 @@ export default function Input({
         type={inputType}
         placeholder={placeholder}
         defaultValue={value}
-        className={`w-full  h-14 py-2 rounded-xl border ${
-          error ? "border-error" : ""
-        } text-black p-4  font-sans focus:outline-none`}
+        className={`w-full ${
+          size ? `h-[${size}rem]` : `h-[3rem]`
+        } font-montserrat  py-2 rounded-xl ${
+          outline && "bg-purple border border-white text-white"
+        }  border ${error ? "border-error" : ""} p-4  focus:outline-none`}
       />
 
       {type === "password" && (
