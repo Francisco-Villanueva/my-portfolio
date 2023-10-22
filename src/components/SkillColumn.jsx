@@ -9,7 +9,7 @@ export default function SkillColumn({
   description,
 }) {
   return (
-    <div className="bg-white p-4 rounded-md drop-shadow-2xl">
+    <div className="bg-white p-4 rounded-md drop-shadow-2xl w-1/5">
       <header className="flex flex-col items-center gap-2 text-3xl font-montserrat">
         {iconTitle}
         {title ? <h2 className="font-bold text-purple">{title}</h2> : null}

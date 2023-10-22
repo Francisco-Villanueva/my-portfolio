@@ -7,11 +7,11 @@ export default function HomePage({ className = "" }) {
       <div className="h-full w-full flex  items-center justify-around  p-[3rem] ">
         <div className="flex flex-col gap-4">
           <div className="flex gap-2  text-[3rem] ">
-            <span className="text-light-purple">Hi there, I'm</span>
+            <span className="text-purple font-light">Hi there, I'm</span>
             <b className="text-purple">Francisco</b>
           </div>
           <div className="flex gap-2   text-xl">
-            <span className="text-light-purple"> I'm a </span>
+            <span className="text-purple font-light"> I'm a </span>
             <b className="text-purple">Full Stack Developer</b>
           </div>
         </div>

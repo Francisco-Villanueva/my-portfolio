@@ -18,7 +18,7 @@ export default function SkillsPage({ className = "" }) {
     <InternalLayout>
       <SectionHeader>SKILLS</SectionHeader>
 
-      <SectionLayout className="grid grid-cols-5 gap-2 ">
+      <SectionLayout className="flex gap-2  ">
         <SkillColumn
           skills={skills.front}
           iconTitle={

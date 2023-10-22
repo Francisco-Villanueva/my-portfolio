@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     id: 1,
     title: "First Plug",
@@ -34,4 +34,25 @@ const projects = [
   },
 ];
 
-export default projects;
+export const myProjects = [
+  {
+    id: 1,
+    title: "Wallet App",
+    status: "develop",
+    description:
+      "Web application to manage personal expenses in a personalized way.",
+  },
+  {
+    id: 3,
+    title: "Tesoreria",
+    status: "validating",
+    description:
+      "Web application for the management and administration of the treasury of a scout group.",
+  },
+  {
+    id: 2,
+    title: "Santa Cecilia",
+    status: "prototype",
+    description: "Musical web application with songs from a scout group.",
+  },
+];
