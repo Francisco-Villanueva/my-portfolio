@@ -20,7 +20,8 @@ export default function WorkCard({ project, className = "" }) {
     <article
       onMouseOver={handleHover}
       onMouseOut={handleHoverOut}
-      className={`relative h-[20rem] rounded-[5px] border    shadow-sm overflow-hidden hover:border-purple transition-all duration-200 ${className}`}
+      className={`relative h-[20rem] rounded-[5px] 
+       overflow-hidden hover:border  transition-all duration-200 ${className}`}
     >
       <Image
         src={project.logo}

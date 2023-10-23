@@ -4,7 +4,7 @@ import React from "react";
 export default function HomePage({ className = "" }) {
   return (
     <section className={`${className}   h-[100vh]  `}>
-      <div className="h-full w-full flex  items-center justify-around  p-[3rem] ">
+      <div className="h-full w-full flex  items-center justify-around   p-[3rem] ">
         <div className="flex flex-col gap-4">
           <div className="flex gap-2  text-[3rem] ">
             <span className="text-purple font-light">Hi there, I'm</span>
