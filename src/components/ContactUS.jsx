@@ -10,7 +10,7 @@ export default function ContactUS({ sectionTheme = "" }) {
   return (
     <InternalLayout>
       <SectionHeader sectionTheme={sectionTheme}>Contact Me</SectionHeader>
-      <SectionLayout className="  h-[80vh] rounded-md p-4 text-white font-montserrat w-1/2">
+      <SectionLayout className="  h-[80vh] rounded-md p-4 text-white font-montserrat w-[50vw]">
         <p className="text-2xl font-bold">
           I'm excited to learn about yoru proyect. Contact me to get started!
         </p>
