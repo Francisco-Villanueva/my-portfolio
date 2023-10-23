@@ -7,7 +7,7 @@ export default function SectionHeader({
 }) {
   return (
     <header
-      className={` flex items-center gap-4 w-[90%] m-auto translate-y-[-50%] ${className} `}
+      className={` absolute flex items-center gap-4 w-[90%] m-auto translate-y-[-50%] left-[5rem] ${className} `}
     >
       <article
         className={`text-3xl  grid place-items-center ${
@@ -16,7 +16,6 @@ export default function SectionHeader({
       >
         {children}
       </article>
-      {/* <div className="border bg-white rounded-full  h-[.2rem] flex-grow"></div> */}
     </header>
   );
 }

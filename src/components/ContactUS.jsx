@@ -10,8 +10,7 @@ import React from "react";
 export default function ContactUS({ sectionTheme = "" }) {
   return (
     <InternalLayout>
-      <SectionHeader sectionTheme={sectionTheme}>Contact Me</SectionHeader>
-      <SectionLayout className="flex flex-col gap-4 h-[80vh] w-[550px] rounded-md p-4 text-white font-montserrat ">
+      <SectionLayout className="flex flex-col gap-4   w-[40%] rounded-md p-4 text-white font-montserrat ">
         <p className="text-2xl font-bold">
           I'm excited to learn about yoru proyect. Contact me to get started!
         </p>

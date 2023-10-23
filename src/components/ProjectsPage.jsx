@@ -15,15 +15,13 @@ export default function ProjectsPage({ className = "", sectionTheme = "" }) {
   const { isModalOpen, openModal, closeModal } = useModal();
   return (
     <InternalLayout>
-      <SectionHeader sectionTheme={sectionTheme}>PROJECTS</SectionHeader>
-
       <SectionLayout className="grid grid-cols-3 gap-3 ">
         {projects.map((project) => (
           <WorkCard project={project} key={project.id} />
         ))}
       </SectionLayout>
 
-      <div className="bg-purple w-[70%] m-auto rounded-[2rem] flex flex-col items-center gap-4 p-4 ">
+      <div className="bg-purple w-[80%] m-auto rounded-[2rem] flex flex-col items-center gap-4 p-4 ">
         <div className=" flex flex-col items-center text-white gap-4  font-inter">
           <h2 className="text-3xl font-bold">My personal projects</h2>
           <span className="w-2/3 text-center font-medium">

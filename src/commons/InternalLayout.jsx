@@ -2,8 +2,8 @@ import React from "react";
 
 export default function InternalLayout({ className = "", children }) {
   return (
-    <article className={` flex flex-col  gap-4  h-[90%] ${className}`}>
+    <div className={`    min-h-[100vh] grid place-items-center ${className}`}>
       {children}
-    </article>
+    </div>
   );
 }
