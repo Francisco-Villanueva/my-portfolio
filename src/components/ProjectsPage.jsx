@@ -34,28 +34,31 @@ export default function ProjectsPage({ className = "", sectionTheme = "" }) {
           </span>
         </div>
         <div className="grid grid-cols-3 gap-2 w-[90%] ">
-          {myProjects.map((project) => (
+          {myProjects.slice(0, 3).map((project) => (
             <MyProjectCard project={project} />
           ))}
         </div>
         {isModalOpen && (
           <div className="grid grid-cols-3 gap-2 w-[90%] ">
-            {myProjects.map((project) => (
+            {myProjects.slice(3).map((project) => (
               <MyProjectCard project={project} />
             ))}
           </div>
         )}
-        <Button
-          variant={"primary"}
-          className="font-bold m-auto"
-          onClick={isModalOpen ? closeModal : openModal}
-        >
-          <DropDownArrow
-            className={`transition-all duration-150 ${
-              isModalOpen ? "rotate-180" : "rotate-360"
-            }`}
-          />
-        </Button>
+
+        {myProjects.length > 3 && (
+          <Button
+            variant={"primary"}
+            className="font-bold m-auto"
+            onClick={isModalOpen ? closeModal : openModal}
+          >
+            <DropDownArrow
+              className={`transition-all duration-150 ${
+                isModalOpen ? "rotate-180" : "rotate-360"
+              }`}
+            />
+          </Button>
+        )}
       </div>
     </InternalLayout>
   );
