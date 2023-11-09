@@ -1,3 +1,4 @@
+"use client";
 import Button from "@/commons/Button";
 import DropdownInput from "@/commons/DropdownInput";
 import Input from "@/commons/Input";
@@ -32,7 +33,14 @@ export default function ContactUS({ sectionTheme = "" }) {
           </div>
           <Input type={"text"} title={"Phone Number"} outline={true} />
           <Textarea label={"Description"} />
-          <Button variant={"secondary"} className="w-1/4 m-auto font-bold">
+          <Button
+            variant={"secondary"}
+            className="w-1/4 m-auto font-bold"
+            type="button"
+            onClick={() => {
+              console.log("algo");
+            }}
+          >
             Submit
           </Button>
           {/* METER UN SELECT CON EL TIPO DE PROYECTO */}

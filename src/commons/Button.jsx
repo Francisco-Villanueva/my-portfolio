@@ -1,6 +1,12 @@
 import React from "react";
 
-export default function Button({ className = "", variant, children, onClick }) {
+export default function Button({
+  className = "",
+  variant,
+  children,
+  onClick,
+  type,
+}) {
   const btnStyle = {
     variant: {
       primary: " border border-purple  bg-purple text-white hover:scale-[1.1] ",
@@ -26,6 +32,7 @@ export default function Button({ className = "", variant, children, onClick }) {
   return (
     <button
       onClick={onClick}
+      type={type}
       className={`${
         variant && btnStyle.variant[variant]
       } px-4 py-2 rounded-md transition-all duration-150  ${className}`}

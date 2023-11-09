@@ -18,9 +18,13 @@ import express from "../../public/imgs/express.png";
 import mongo from "../../public/imgs/mongo.png";
 import mongoose from "../../public/imgs/mongoose.png";
 import calendar from "../../public/imgs/calendar.png";
+import nest from "../../public/imgs/nest.png";
 import keep from "../../public/imgs/keep.png";
 import slack from "../../public/imgs/slack.png";
+import docker from "../../public/imgs/docker.png";
+import github from "../../public/imgs/github.png";
 import discord from "../../public/imgs/discord.webp";
+import tsLogo from "../../public/imgs/tsLoog.webp";
 
 export const skills = {
   front: [
@@ -29,6 +33,13 @@ export const skills = {
       skill: "JavaScript",
       alias: "js",
       img: jsLogo,
+      link: "https://developer.mozilla.org/es/docs/Web/JavaScript",
+    },
+    {
+      id: 10,
+      skill: "TypeScript",
+      alias: "ts",
+      img: tsLogo,
       link: "https://developer.mozilla.org/es/docs/Web/JavaScript",
     },
     {
@@ -83,17 +94,30 @@ export const skills = {
       link: "https://developer.mozilla.org/es/docs/Web/JavaScript",
     },
     {
-      id: 5,
+      id: 10,
+      skill: "TypeScript",
+      alias: "ts",
+      img: tsLogo,
+      link: "https://developer.mozilla.org/es/docs/Web/JavaScript",
+    },
+    {
+      id: 9998,
       skill: "Node JS",
       alias: "node",
       img: node,
       link: "https://nodejs.org/en/docs",
     },
     {
-      id: 5,
+      id: 123444,
       skill: "Express JS",
       alias: "express",
       img: express,
+    },
+    {
+      id: 1231231,
+      skill: "Nest JS",
+      alias: "nest",
+      img: nest,
     },
   ],
 
@@ -146,11 +170,25 @@ export const skills = {
 
   org: [
     {
+      id: 56972312312812,
+      skill: "github",
+      alias: "github",
+      img: github,
+    },
+    {
+      id: 56972312312812,
+      skill: "docker",
+      alias: "docker",
+      img: docker,
+    },
+
+    {
       id: 5697812,
       skill: "Notion",
       alias: "notio",
       img: notion,
     },
+
     {
       id: 8,
       skill: "Trello",

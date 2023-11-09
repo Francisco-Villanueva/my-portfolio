@@ -32,6 +32,18 @@ export const projects = [
     img: "/imgs/mobapp.png",
     logo: "/imgs/mobapp.png",
   },
+  {
+    id: 3,
+    title: "Box delivery app",
+    description: {
+      short:
+        "Delivery app where the company must be able to monitor the operation of delivery people, assign or reassign packages and intervene on shipments.",
+      large:
+        "A last mile logistics company has hundreds of delivery drivers who at the beginning of the day receive 10 packages each and who must distribute them throughout the day.",
+    },
+    img: "/imgs/box.png",
+    logo: "/imgs/box.png",
+  },
 ];
 
 export const myProjects = [
