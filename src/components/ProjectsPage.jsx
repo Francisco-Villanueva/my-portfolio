@@ -1,10 +1,8 @@
 "use client";
 import Button from "@/commons/Button";
-import { CodeIcon, DropDownArrow } from "@/commons/Icons";
+import { DropDownArrow } from "@/commons/Icons";
 import InternalLayout from "@/commons/InternalLayout";
 import MyProjectCard from "@/commons/MyProjectCard";
-import ProjectStatus from "@/commons/ProjectStatus";
-import SectionHeader from "@/commons/SectionHeader";
 import SectionLayout from "@/commons/SectionLayout";
 import WorkCard from "@/commons/WorkCard";
 import useModal from "@/hooks/useModal";
@@ -14,7 +12,7 @@ import React from "react";
 export default function ProjectsPage({ className = "", sectionTheme = "" }) {
   const { isModalOpen, openModal, closeModal } = useModal();
   return (
-    <InternalLayout>
+    <InternalLayout className="pt-10 ">
       <SectionLayout className="grid grid-cols-3 gap-3 ">
         {projects.map((project) => (
           <WorkCard project={project} key={project.id} />

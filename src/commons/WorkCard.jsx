@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Button from "./Button";
-import { GithubIcon, LinkIcon } from "./Icons";
+import { GithubIcon } from "./Icons";
 
 export default function WorkCard({ project, className = "" }) {
   const [showInfo, setShowInfo] = useState(false);
@@ -39,14 +39,19 @@ export default function WorkCard({ project, className = "" }) {
       {showInfo ? (
         <span className="grid place-items-center  absolute p-4 h-full  w-full  bg-[rgba(255,255,255,.95)] cursor-pointer ">
           <div className=" flex flex-col justify-between items-center h-[80%]  font-bold text-purple font-montserrat ">
-            <span className=" w-3/4 text-xl ">{project.description.short}</span>
-            <div className="flex gap-2">
-              <Button variant={"primary"}>
-                <GithubIcon className="h-[1rem] " />
-              </Button>
-              <Button variant={"primary"}>
-                <LinkIcon className="h-[1rem] " />
-              </Button>
+            <span className=" w-3/4 text-md ">{project.description.short}</span>
+            <div className="flex gap-2 border justify-center">
+              {project.repos.map((repo) => (
+                <Button
+                  variant={"primary"}
+                  className=" flex flex-col items-center w-[60px]"
+                >
+                  <a href={project.url}>
+                    <GithubIcon className="h-6 " />
+                  </a>
+                  <span className="text-xs font-light">{repo.name}</span>
+                </Button>
+              ))}
             </div>
           </div>
         </span>
