@@ -22,12 +22,14 @@ export default function Navbar({ className = "" }) {
     };
   }, []);
   return (
-    <nav className={` ${className} w-full  m-auto py-4   z-40  rounded-none `}>
-      <div className="w-[90%] flex justify-between m-auto">
+    <nav
+      className={` ${className} w-full  m-auto py-4 max-md:py-2   z-40  rounded-none `}
+    >
+      <div className="w-[90%] max-md:w-full   flex justify-between m-auto">
         <section>
           <FvLogo />
         </section>
-        <section className="flex items-center gap-4 ">
+        <section className="flex items-center gap-4 max-md:text-sm max-md:gap-0 ">
           <NavLink
             value="Home"
             selected={navState === "Home"}
