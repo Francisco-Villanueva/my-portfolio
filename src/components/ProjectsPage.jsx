@@ -12,14 +12,16 @@ import React from "react";
 export default function ProjectsPage({ className = "", sectionTheme = "" }) {
   const { isModalOpen, openModal, closeModal } = useModal();
   return (
-    <InternalLayout className="pt-10 ">
-      <SectionLayout className="grid grid-cols-3 gap-3 ">
-        {projects.map((project) => (
-          <WorkCard project={project} key={project.id} />
-        ))}
+    <InternalLayout className="pt-10 flex flex-col gap-4">
+      <SectionLayout className="flex flex-col gap-8  items-center  max-md:w-[90%]">
+        {projects
+          .sort((a, b) => a.id - b.id)
+          .map((project) => (
+            <WorkCard project={project} key={project.id} />
+          ))}
       </SectionLayout>
 
-      <div className="bg-purple w-[80%] m-auto rounded-[2rem] flex flex-col items-center gap-4 p-4 ">
+      {/* <div className="bg-purple w-[80%] m-auto rounded-[2rem] flex flex-col items-center gap-4 p-4 ">
         <div className=" flex flex-col items-center text-white gap-4  font-inter">
           <h2 className="text-3xl font-bold">My personal projects</h2>
           <span className="w-2/3 text-center font-medium">
@@ -29,7 +31,7 @@ export default function ProjectsPage({ className = "", sectionTheme = "" }) {
             try designing and building my own.
           </span>
         </div>
-        <div className="grid grid-cols-3 gap-2 w-[90%] ">
+        <div className="grid grid-cols-3 gap-2 w-[90%]  ">
           {myProjects.slice(0, 3).map((project) => (
             <MyProjectCard project={project} />
           ))}
@@ -55,7 +57,7 @@ export default function ProjectsPage({ className = "", sectionTheme = "" }) {
             />
           </Button>
         )}
-      </div>
+      </div> */}
     </InternalLayout>
   );
 }

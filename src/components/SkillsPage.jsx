@@ -16,7 +16,7 @@ import InternalLayout from "@/commons/InternalLayout";
 export default function SkillsPage({ className = "", sectionTheme = "" }) {
   return (
     <InternalLayout>
-      <SectionLayout className="grid grid-cols-5 gap-2   ">
+      <SectionLayout className="grid grid-cols-5 max-xl:grid-cols-3  gap-2 max-md:flex  max-md:flex-col max-md:gap-2  ">
         <SkillColumn
           skills={skills.front}
           iconTitle={

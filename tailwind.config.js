@@ -14,11 +14,12 @@ module.exports = {
       },
       colors: {
         purple: "#451465",
-
         "light-purple": "#7c786f",
         blue: "#2a3763",
         "dark-blue": "#06182f",
         grey: "#cecece",
+        'dark-grey': "#818181",
+        black: "#333333",
       },
     },
   },
