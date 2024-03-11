@@ -7,12 +7,12 @@ export default function SectionHeader({
 }) {
   return (
     <header
-      className={` absolute flex items-center gap-4 w-[90%]  top-0  left-[5rem] ${className} `}
+      className={` flex items-center justify-center gap-4 w-fill  ${className} `}
     >
       <article
-        className={`text-3xl  grid place-items-center shadow-md  z-50  ${
+        className={`text-3xl  grid place-items-center  ${
           sectionTheme === "purple" ? "text-white" : "text-purple"
-        }  font-bold bg-${sectionTheme} rounded-full h-[4rem]  px-6`}
+        }  font-bold  `}
       >
         {children}
       </article>

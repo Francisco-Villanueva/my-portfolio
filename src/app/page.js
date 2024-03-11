@@ -9,7 +9,7 @@ import SkillsPage from "@/components/SkillsPage";
 export default function Home() {
   return (
     <main className="relative h-full  w-full  flex flex-col  items-center">
-      <Navbar className="absolute  rounded-md" />
+      <Navbar  />
 
       <PageLayout id="Home" className="bg-white  ">
         <HomePage />
@@ -19,13 +19,12 @@ export default function Home() {
         <SkillsPage sectionTheme="purple" />
       </PageLayout>
       <PageLayout id="Projects" className="bg-white  ">
-        <SectionHeader sectionTheme={"white"}>PROJECTS</SectionHeader>
+        <SectionHeader sectionTheme={"white"}>My Experience</SectionHeader>
 
         <ProjectsPage sectionTheme="white" />
       </PageLayout>
       <PageLayout id="Contact" className="bg-purple   ">
         <SectionHeader sectionTheme={"purple"}>Contact Me</SectionHeader>
-
         <ContactUS sectionTheme="purple" />
       </PageLayout>
     </main>

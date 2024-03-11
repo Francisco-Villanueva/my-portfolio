@@ -1,12 +1,8 @@
-"use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import Button from "./Button";
 import { GithubIcon } from "./Icons";
-
-export default function WorkCard({ project, className = "" }) {
+export default function WorkCard({ project }) {
   return (
-    <article className="flex max-md:flex-col justify-between gap-4 w-[60%]  max-md:w-full text-black ">
+    <article className="flex max-md:flex-col items-center justify-between gap-4 w-full max-lg:w-[60%]  max-md:w-full text-black  border p-4 rounded-xl ">
       <div className="w-1/3 max-md:w-full h-[60px] relative ">
         <Image
           src={project.logo}
@@ -15,7 +11,7 @@ export default function WorkCard({ project, className = "" }) {
           alt={project.title}
         />
       </div>
-      <div className="flex flex-col gap-4 w-2/3 max-md:w-full border-l pl-6">
+      <div className="flex flex-col gap-4 w-2/3 max-md:w-full border-l pl-6 shadow-sm">
         <div className="">
           <h2 className=" font-bold text-xl ">{project.title}</h2>
           <div className="font-normal text-black">
@@ -29,14 +25,15 @@ export default function WorkCard({ project, className = "" }) {
 
         <div className="flex gap-2  justify-around   ">
           {project.repos.map((repo) => (
-            <Button variant={"primary"}>
+            <a
+              href={repo.url}
+              className="border w-full grid p-1 rounded-md bg-purple text-white"
+            >
               <div className=" flex flex-col items-center  ">
-                <a href={project.url}>
-                  <GithubIcon className="h-6 " />
-                </a>
+                <GithubIcon className="h-6 " />
                 <span className="text-xs font-light">{repo.name}</span>
               </div>
-            </Button>
+            </a>
           ))}
         </div>
       </div>
