@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { Montserrat, Inter } from "next/font/google";
+import {  Inter, Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
@@ -9,12 +9,6 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-const inter = Inter({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 export const metadata = {
   title: "Villanueva | Porfolio",
@@ -23,7 +17,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
+    <html lang="en" className={` ${montserrat.variable} font-montserrat`}>
+ 
       <body>{children}</body>
     </html>
   );
